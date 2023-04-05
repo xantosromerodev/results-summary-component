@@ -1,12 +1,6 @@
 /* Fuente */
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 :root {
     /* Primario */
     --light-red: hsl(0, 100%, 67%);
@@ -40,19 +34,17 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    flex-direction: column;
-    overflow: hidden;
+    /* flex-direction: column; */
+    /* overflow: hidden; */
 }
-
-/* Tarjeta padre */
 
 /* Tarjeta hijo - izquierda */
 .card__left {
     background: linear-gradient(to bottom, var(--light-slate-blue) 10%, var(--light-royal-blue) 100%);
     text-align: center;
     height: 50vh;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 /* Titulo(Your Result), texto(You scored...) */
@@ -96,8 +88,8 @@ body {
 
 /* Tarjeta hijo - derecha */
 .card__right {
-    background-color: aliceblue;
-    color: black;
+    background-color: var(--white-color);
+    color: var(--dark-gray-blue);
 }
 
 /* Titulo(Summary) */
@@ -155,4 +147,16 @@ img {
 
 .btn {
     display: inline-block;
+    padding: 13px;
+    border: none;
+    margin: 10px 20px;
+    width: 100%;
+    border-radius: 43px;
+}
+
+.btn__bgcolor {
+    color: var(--white-color);
+    background-color: var(--dark-gray-blue);
+    font-size: 18px;
+    font-weight: 700;
 }
