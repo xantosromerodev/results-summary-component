@@ -12,12 +12,10 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Results Summary Component</title>
 </head>
-
-<body class="dflex">
+<body>
 
     <main>
-        <section class="card dflex">
-
+        <section class="card grid">
             <div class="card__left">
                 <h2 class="card__left--title">Your Result</h2>
                 <div class="card__circle dflex">
@@ -27,14 +25,44 @@
                 <h3 class="card__left--subtitle">Great</h3>
                 <p class="card__left--text">You scored higher than 65% of the people who have taken these tests.</p>
             </div>
-
             <div class="card__right">
-                <h2>Summary</h2>
-                
+                <h2 class="card__right--title">Summary</h2>
+                <div class="card__list">
+                    <div class="card__option card__option--red dflex">
+                        <div class="dflex">
+                            <img src="images/icon-reaction.svg" alt="Reaction Icon">
+                            <p class="option__text--red">Reaction</p>
+                        </div>
+                        <p class="option--bold-text">80<span> / 100</span></p>
+                    </div>
+                    <div class="card__option card__option--yellow dflex">
+                        <div class="dflex">
+                            <img src="images/icon-memory.svg" alt="Memory Icon">
+                            <p class="option__text--yellow">Memory</p>
+                        </div>
+                        <p class="option--bold-text">92<span> / 100</span></p>
+                    </div>
+                    <div class="card__option card__option--green dflex">
+                        <div class="dflex">
+                            <img src="images/icon-verbal.svg" alt="Verbal Icon">
+                            <p class="option__text--green">Verbal</p>
+                        </div>
+                        <p class="option--bold-text">61<span> / 100</span></p>
+                    </div>
+                    <div class="card__option card__option--blue dflex">
+                        <div class="dflex">
+                            <img src="images/icon-visual.svg" alt="Visual Icon">
+                            <p class="option__text--blue">Visual</p>
+                        </div>
+                        <p class="option--bold-text">72<span> / 100</span></p>
+                    </div>
+                </div>
+                <div class="card__button">
+                    <a href="#" type="button" class="button--continue">Continue</a>
+                </div>
             </div>
         </section>
     </main>
 
 </body>
-
 </html>

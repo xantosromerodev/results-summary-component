@@ -3,18 +3,30 @@
 
 /* Variables */
 :root {
-    --white-color: #ffffff;
+    /* Primario */
+    --light-red: hsl(0, 100%, 67%);
+    --orange-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+
+    /* Gradiente */
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+
+    /* Neutral */
+    --white-color: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
 }
 
 body {
     font-family: 'Hanken Grotesk', sans-serif;
     font-size: 16px;
     font-weight: 500;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
 }
-
 
 /* ========== Estilos generales ========== */
 .dflex {
@@ -23,27 +35,40 @@ body {
     align-items: center;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.card {
+    height: 100vh;
+    /* overflow: hidden; */
+}
+
+.card__left, .card__right {
+    height: 50vh;
+    padding: 0 20px;
+}
+
 p {
     font-size: 18px;
 }
 
-
-/* ========== Estilos card left ========== */
-
-.card {
-    width: 100vw;
-    height: 100vh;
-    flex-direction: column;
+span {
+    color: rgba(150, 150, 150, 0.8);
 }
 
+.option--bold-text {
+    font-weight: 800;
+}
+
+/* ========== Estilos card left ========== */
 .card__left {
-    width: 100%;
-    height: 60vh;
     text-align: center;
-    background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
     color: #ffffff;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
+    background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 }
 
 .card__left--title {
@@ -51,13 +76,12 @@ p {
 }
 
 .card__circle {
-    border: 1px solid transparent;
-    background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
-    width: 150px;
-    height: 150px;
+    width: 110px;
+    height: 110px;
     margin: auto;
-    border-radius: 150px;
+    border-radius: 110px;
     flex-direction: column;
+    background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
 }
 
 .circle__large--number {
@@ -72,19 +96,84 @@ p {
 }
 
 .card__left--subtitle {
-    font-size: 24px;
+    font-size: 25px;
 }
 
 .card__left--text {
-    margin: 0 20px;
     font-weight: 500;
     color: hsl(241, 100%, 89%);
 }
 
 
 /* ========== Estilos card right ========== */
-.card__right {
+.card__right--title {
+    color: hsl(224, 30%, 27%);
+}
+
+.card__option {
+    justify-content: space-between;
     background-color: #ffffff;
+    border-radius: 10px;
+    padding: 0 10px;
+    margin: 10px 0px;
+}
+
+/* Estilos primera lista */
+.card__option--red {
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+.option__text--red {
+    color: hsl(0, 100%, 67%);
+    padding-left: 4px;
+}
+
+/* Estilos segunda lista */
+.card__option--yellow {
+    background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+.option__text--yellow {
+    color: hsl(39, 100%, 56%);
+    padding-left: 4px;
+}
+
+/*  */
+.card__option--green {
+    background-color: hsla(166, 100%, 37%, 0.1);
+}
+.option__text--green {
+    color: hsl(166, 100%, 37%);
+    padding-left: 4px;
+}
+
+/*  */
+.card__option--blue {
+    background-color: hsla(234, 85%, 45%, 0.1);
+}
+.option__text--blue {
+    color: hsl(234, 85%, 45%);
+    padding-left: 4px;
+}
+
+/* Estilos boton */
+.card__button {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.button--continue {
+    display: inline-block;
     width: 100%;
-    height: 50vh;
+    height: 54px;
+    border-radius: 30px;
+    line-height: 54px;
+    text-decoration: none;
+    color: var(--white-color);
+    font-weight: 800;
+    background-color: hsl(224, 30%, 27%);
+}
+
+.button--continue:hover {
+    background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 }
