@@ -17,6 +17,7 @@ body {
     font-family: 'Hanken Grotesk', sans-serif;
     font-size: 16px;
     font-weight: 500;
+    background-color: rgb(245, 245, 245);
 }
 
 /* ========== Estilos generales ========== */
@@ -29,10 +30,6 @@ body {
 .grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-}
-
-.card {
-    height: 100vh;
 }
 
 .card__left {
@@ -169,4 +166,39 @@ span {
 
 .button--continue:hover {
     background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+
+/* ========== Diseño Web Responsive ========== */
+@media screen and (min-width: 1200px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        height: 100vh;
+    }
+
+    .grid {
+        grid-template-columns: 50% 50%;
+    }
+
+    .card {
+        width: 650px;
+        height: auto;
+        border-radius: 30px;
+        box-shadow: rgba(48, 59, 90, 0.2) 6px 6px 20px;
+    }
+
+    .card__left {
+        height: 100%;
+        border-radius: 30px;
+        padding: 0px 40px;
+    }
+
+    .card__left--title,
+    .card__circle,
+    .card__left--subtitle {
+        margin-top: 40px;
+    }
 }
