@@ -196,6 +196,10 @@ span {
         padding: 0px 40px;
     }
 
+    .card__left--title {
+        font-size: 25px;
+    }
+
     .card__left--title,
     .card__circle,
     .card__left--subtitle {
